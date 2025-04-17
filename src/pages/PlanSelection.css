@@ -1,0 +1,79 @@
+.PlanSelection{
+  /* border: 3px solid; */
+  height: 100%;
+  position: relative;
+}
+.PlanSelectionTitle{
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: rgb(2, 41, 90);
+}
+.PlanSelectionDetails{
+  color: grey;
+  font-size: 1.2rem
+}
+.PlanSelectionCards{
+  /* border: 3px solid; */
+  margin-top: 5% ;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Period{
+  width: 100%;
+  /* border: 3px solid; */
+  margin-top: 3%;
+  background-color: hsl(217, 100%, 97%);
+}
+.Time{
+  display: flex;
+  /* border: 3px solid; */
+  width: 42%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.Month, .Year{
+  /* border: 3px solid; */
+  font-size: 1.3rem;
+  position: relative;
+  bottom: 0.2rem;
+  color: rgb(2, 41, 90);
+  font-weight: 600;
+}
+.choosen{
+  color: grey;
+}
+.Toggle{
+  /* border: 3px solid; */
+  width: 30%;
+}
+
+
+.Buttons{
+  /* border: 3px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.Buttons p {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.Buttons button{
+  padding: 2% 5%;
+  color: white;
+  background-color: rgb(2, 41, 90);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}

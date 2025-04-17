@@ -1,0 +1,26 @@
+.PlanLinksCard{
+  border: 1px solid grey;
+  width: 30%;
+  padding: 3%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.selected{
+  background-color: hsl(217, 100%, 97%);
+}
+.PlanLinksCard:hover{
+  border: 1px solid rgb(71, 61, 255);
+}
+.PlanLinksCard img{
+  margin-bottom: 3rem
+}
+.PlanLinksCard h3{
+  color: rgb(2, 41, 90);
+}
+.price{
+  color: grey;
+}
+.free{
+  color: rgb(2, 41, 90);
+  font-weight: 500;
+}

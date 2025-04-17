@@ -5,9 +5,15 @@ import PlanSelection from './pages/PlanSelection.jsx'
 import AddonsPage from './pages/AddonsPage.jsx'
 import SummaryPage from './pages/SummaryPage.jsx'
 import './App.css'
+import { useState } from 'react'
 
 
 function App() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [selected, setSelected] = useState('')
+  const [Timeperiod, setTimeperiod] = useState(true)
 
   return (
     <div className="Application">
@@ -17,10 +23,19 @@ function App() {
         </div>
         <div className="MainPage">
           <Routes>
-            <Route path='/' element={<PersonalInfo />} />
-            <Route path='/plan-selection' element={<PlanSelection />} />
-            <Route path='/addons' element={<AddonsPage />} />
-            <Route path='/summary' element={<SummaryPage />} />
+            <Route path='/' 
+                    element={<PersonalInfo
+                    name={name} setName={setName}
+                    email={email} setEmail={setEmail}
+                    phone={phone} setPhone={setPhone} />} />
+            <Route path='/plan-selection' 
+                    element={<PlanSelection
+                    selected={selected} setSelected={setSelected}
+                    Timeperiod={Timeperiod} setTimeperiod={setTimeperiod} />} />
+            <Route path='/addons' 
+                    element={<AddonsPage />} />
+            <Route path='/summary' 
+                    element={<SummaryPage />} />
           </Routes>
         </div>
       </Router>

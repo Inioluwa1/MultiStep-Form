@@ -1,0 +1,75 @@
+.PersonalInfo{
+  /* border: 3px solid; */
+  height: 100%
+}
+
+.PersonalInfo h1{
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: rgb(2, 41, 90);
+}
+
+.ProvideInfo{
+  color: grey;
+  font-size: 1.2rem
+}
+
+.PersonalInfoForm{
+  /* border: 3px solid; */
+  margin-top: 3%;
+  height: 78%;
+  position: relative;
+}
+
+.FormGroup{
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0;
+  /* border: 3px solid; */
+  border-radius: 10px;
+}
+.FormGroupLabel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.FormGroup label{
+  font-size: 1.1rem;
+  color: rgb(2, 41, 90);
+  margin-bottom: 1%;
+}
+.errorText{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 1%;
+  display: none;
+}
+.errorText.show{
+  display: block;
+} 
+.FormGroupInput{
+  font-size: 1.3rem;
+  padding: 2%;
+  border-radius: 5px;
+  border: 1px solid rgb(2, 41, 90);
+  cursor: pointer;
+}
+.FormGroupInput:focus{
+  border: 2px solid blue;
+} 
+.errorFormshow{
+  border: 2px solid red;
+}
+.PersonalInfoButton{
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  padding: 2% 5%;
+  color: white;
+  background-color: rgb(2, 41, 90);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}

@@ -9,7 +9,7 @@
 
 .Application{
   /* border: 3px solid; */
-  width: 80%;
+  width: 60%;
   height: 80vh;
   margin: auto;
   margin-top: 10vh;
@@ -23,13 +23,14 @@
 
 .NavigationBar{
   /* border: 3px solid; */
-  width: 35%;
+  width: 30%;
   height: 100%;
   border-radius: 15px;
 }
 
 .MainPage{
   /* border: 3px solid; */
-  width: 60%;
+  width: 55%;
   height: 100%;
+  margin-right: 5%;
 }
