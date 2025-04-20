@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react'
 import "./PlanLinksCard.css"
 
-export default function PlanLinksCard({image, title, price,free, selected, setSelected}) {
+export default function PlanLinksCard({image, title, price, free, selected, setSelected}) {
 
 const handleSelected = () => {
   setSelected(title)  
 }
-
-// useEffect(() => {
-//   if(selected){
-//     console.log(selected)
-//   }
-// }, [selected])
-
 
 
   return (
@@ -23,4 +16,4 @@ const handleSelected = () => {
       <p className='free'> {free} </p>
     </div>
   )
-}
+} 

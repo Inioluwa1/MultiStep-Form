@@ -1,0 +1,34 @@
+.AddsonLinkCard{
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5%;
+  padding: 2%;
+}
+/* .AddsonLinkCard:hover{
+  background-color: rgb(2, 41, 90);
+  color: white;
+  cursor: pointer;
+} */
+ .AddsonLinkCardCheckBox{
+  cursor: pointer
+ }
+.AddsonLinkCardDetails{
+  /* border: 3px solid; */
+  width: 60%;
+  margin-left: -5%;
+}
+.AddsonLinkCardDetails h2{
+  color: rgb(2, 41, 90);
+}
+.AddsonLinkCardDetails p{
+  color: grey;
+  font-size: 1.2rem;
+}
+.Duration{
+  color: rgb(128, 120, 213);
+  font-weight: bold;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,40 @@
+.AddonsPage{
+  height: 100%;
+  position: relative;
+}
+.AddsonPageTitle{
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: rgb(2, 41, 90);
+}
+.AddsonPageDeatils{
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.AddonsPageButton{
+  /* border: 3px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.AddonsPageButton p {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.AddonsPageButton button{
+  padding: 2% 5%;
+  color: white;
+  background-color: rgb(2, 41, 90);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}

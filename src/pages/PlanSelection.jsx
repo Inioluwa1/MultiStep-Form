@@ -35,7 +35,7 @@ export default function PlanSelection({selected, setSelected, Timeperiod, setTim
             price={`${Timeperiod? link.price: link.price2}`}
             free={`${Timeperiod? "" : link.free}`}
             selected={selected}
-            setSelected={setSelected}
+            setSelected={setSelected} 
            />
         ))}
       </div>
@@ -51,6 +51,7 @@ export default function PlanSelection({selected, setSelected, Timeperiod, setTim
           <p className={`Year ${Timeperiod? "choosen" : ""}`}> Yearly </p>
         </div>
       </div>
+      
       <div className='Buttons'>
         <p onClick={gobacktoInfo}> Go Back </p>
         <button onClick={movetoaddons}> Next Step </button>
