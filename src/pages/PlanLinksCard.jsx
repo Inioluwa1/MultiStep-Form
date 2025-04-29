@@ -1,19 +1,23 @@
 import React, { useEffect } from 'react'
 import "./PlanLinksCard.css"
 
-export default function PlanLinksCard({image, title, price, free, selected, setSelected}) {
+export default function PlanLinksCard({link, isMonth, price, selectedName, setSelectedName, setSelectedPrice}) {
 
 const handleSelected = () => {
-  setSelected(title)  
+  setSelectedName(link.title)
+  setSelectedPrice(price)
 }
 
 
   return (
-    <div className={`PlanLinksCard ${selected === title? "selected" : ""}`} onClick={handleSelected}>
-      <img src={image} alt={title} />
-      <h3> {title} </h3>
-      <p className='price'> ${price} </p>
-      <p className='free'> {free} </p>
+    <div className={`PlanLinksCard ${selectedName === link.title? "selected" : ""}`} onClick={handleSelected}>
+      <img src={link.image} alt={link.title} />
+      <div className='PlanLinksCardDetails'>
+        <h3> {link.title} </h3>
+        <p className='price'> ${isMonth? `${link.monthlyPrice}` : `${link.yearlyPrice}`} </p>
+        <p className='free'> {isMonth? "" : `${link.free}`} </p>
+      </div>
     </div>
   )
 } 
+ 

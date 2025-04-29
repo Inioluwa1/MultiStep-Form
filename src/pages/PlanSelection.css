@@ -77,3 +77,32 @@
   border: none;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width:768px) {
+  .PlanSelection{
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .PlanSelectionTitle{
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .PlanSelectionDetails{
+    font-size: 1.4rem;
+  }
+  .PlanSelectionCards{
+    flex-direction: column;
+  }
+  .Period{
+    background-color: rgba(240, 246, 255, 0.5);
+  }
+  .Time{
+    width: 70%;
+  }
+  .Buttons{
+    width: 85%;
+    left: 7.5%;
+    bottom: 1rem;
+  }
+}

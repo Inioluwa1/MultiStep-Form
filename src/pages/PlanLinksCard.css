@@ -14,7 +14,7 @@
 .PlanLinksCard img{
   margin-bottom: 3rem
 }
-.PlanLinksCard h3{
+.PlanLinksCardDetails h3{
   color: rgb(2, 41, 90);
 }
 .price{
@@ -23,4 +23,17 @@
 .free{
   color: rgb(2, 41, 90);
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .PlanLinksCard{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .PlanLinksCard img{
+    margin: 0;
+    margin-right: 1rem;
+  }
 }

@@ -2,17 +2,18 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './NavigationLinksCard.css'
 
-export default function NavigationLinksCard({number, step, info, link}) {
+export default function NavigationLinksCard({link}) {
   const location = useLocation()
-  const isActive = location.pathname === link
+  const isActive = location.pathname === link.link
 
   return (
-    <Link className='NavigationLinksCard' to={link}>
-      <p className={`NavigationLinksCardNumber ${isActive? "Pageactive" : null }`}> {number} </p>
+    <Link className='NavigationLinksCard' to={link.link}>
+      <p className={`NavigationLinksCardNumber ${isActive? "Pageactive" : null }`}> {link.id} </p>
       <div className='NavigationLinksCardDetails'>
-        <p className='NavigationLinksCardStep'> {step} </p>
-        <p className='NavigationLinksCardTitle'> {info} </p>
+        <p className='NavigationLinksCardStep'> {link.step} </p>
+        <p className='NavigationLinksCardTitle'> {link.info} </p>
       </div>
     </Link>
   )
 }
+ 

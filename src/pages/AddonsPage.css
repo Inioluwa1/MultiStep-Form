@@ -38,3 +38,24 @@
   border: none;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .AddonsPage{
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .AddsonPageTitle{
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .AddsonPageDeatils{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .AddonsPageButton{
+    width: 85%;
+    left: 7.5%;
+    bottom: 1rem;
+  }
+}

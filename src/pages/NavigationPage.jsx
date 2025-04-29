@@ -10,10 +10,7 @@ export default function NavigationPage() {
         {NavigationLinks.map((link, index) => (
           <NavigationLinksCard 
             key={index}
-            number={link.id}
-            step={link.step}
-            info={link.info}
-            link={link.link}
+            link={link}
           />
         ))}
       </div>

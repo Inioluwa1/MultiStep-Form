@@ -1,0 +1,114 @@
+.SummaryPage{
+  position: relative;
+  /* border: 3px solid; */
+  height: 100%;
+
+}
+.Summary{
+  /* border: 3px solid; */
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgb(238, 240, 245);
+  border-radius: 5px;
+}
+.PlanSummary{
+  /* border: 3px solid; */
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.PlanSummary p{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:rgb(2, 41, 90)
+}
+.Link{
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.Link:hover{
+  color: blue;
+}
+.ServiceSummary{
+  /* border: 3px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: grey;
+}
+.SummaryPrice{
+  color:rgb(2, 41, 90)
+}
+.SummaryTotal{
+  /* border: 3px solid; */
+  margin-top: 2rem;
+  padding: 1rem;
+  color: grey;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SummaryTotalPrice{
+  color: rgb(67, 51, 184);
+  font-weight: bolder;
+}
+
+.SummaryPageButton{
+  /* border: 3px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.SummaryPageButton p {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.SummaryPageButton button{
+  padding: 2% 5%;
+  color: white;
+  background-color: rgb(2, 41, 90);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.SummaryPageButton button:hover{
+  background-color: rgb(124, 15, 226)
+}
+
+@media screen and (max-width:768px) {
+  .SummaryPage{
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 8rem;
+  }
+  .Link{
+    color: grey;
+  }
+
+  .SummaryPageButton{
+    width: 85%;
+    left: 7.5%;
+    bottom: 1rem;
+  }
+  .SummaryPageButton p{
+    font-weight: 300;
+  }
+  .SummaryPageButton button{
+    background-color: rgb(72, 62, 255);
+    padding: 4% 6%;
+  }
+}

@@ -5,6 +5,7 @@ import PersonalInfo from './pages/PersonalInfo.jsx'
 import PlanSelection from './pages/PlanSelection.jsx'
 import AddonsPage from './pages/AddonsPage.jsx'
 import SummaryPage from './pages/SummaryPage.jsx'
+import Thankyou from './pages/Thankyou.jsx'
 import './App.css'
 
 
@@ -12,8 +13,10 @@ function App() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [selected, setSelected] = useState('')
-  const [Timeperiod, setTimeperiod] = useState(true)
+  const [selectedName, setSelectedName] = useState('')
+  const [selectedPrice, setSelectedPrice] = useState('')  
+  const [isMonth, setisMonth] = useState(true)
+
 
   return (
     <div className="Application">
@@ -31,13 +34,22 @@ function App() {
                     phone={phone} setPhone={setPhone} />} />
             <Route path='/plan-selection' 
                     element={<PlanSelection
-                    selected={selected} setSelected={setSelected}
-                    Timeperiod={Timeperiod} setTimeperiod={setTimeperiod} />} />
+                    setSelectedPrice={setSelectedPrice}
+                    selectedName={selectedName} setSelectedName={setSelectedName}
+                    isMonth={isMonth} setisMonth={setisMonth} />} />
             <Route path='/addons' 
                     element={<AddonsPage 
-                    Timeperiod={Timeperiod} />} />
+                    isMonth={isMonth}
+                    />} />
+            {selectedPrice &&
             <Route path='/summary' 
-                    element={<SummaryPage />} />
+                    element={<SummaryPage
+                    isMonth={isMonth}
+                    selectedName={selectedName} 
+                    selectedPrice={selectedPrice}
+                    />} /> }       
+            <Route path='/thankyou' 
+                    element={<Thankyou />} />        
           </Routes>
         </div>
       </Router>

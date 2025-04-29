@@ -1,35 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './AddsonLinkCard.css'
 import { MdCheckBoxOutlineBlank, MdCheckBox  } from "react-icons/md";
 
-export default function AddsonLinkCard({service, details, price}) {
-  useEffect(
-    () => {
-      if (service === "Customizable Profile") {
-        setCheck(false)
-      }
-    }, [])
-
-  const [check, setCheck] = useState
-  (true)
-
-  const handleToggle = () => {
-    setCheck(!check)
-  }
+export default function AddsonLinkCard({addon, isMonth, toggleAddon}) {
 
   return (
     <div className='AddsonLinkCard'>
-      <div onClick={handleToggle} className='AddsonLinkCardCheckBox'>
-        {check? 
+      <div onClick={() => toggleAddon(addon.id)} className='AddsonLinkCardCheckBox'>
+        {addon.selected? 
         <MdCheckBox size={30} color='rgb(78, 65, 219)' />: 
         <MdCheckBoxOutlineBlank size={30} /> }
       </div>
 
       <div className='AddsonLinkCardDetails'>
-        <h2> {service} </h2>
-        <p> {details} </p>
+        <h2> {addon.service} </h2>
+        <p> {addon.details} </p>
       </div>
-      <p className='Duration'> +${price}</p>
+          <p className='Duration'> +${isMonth? `${addon.monthlyPrice}` : `${addon.yearlyPrice}`} </p>
+          
     </div>
   )
 }

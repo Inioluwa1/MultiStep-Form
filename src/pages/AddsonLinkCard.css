@@ -32,3 +32,23 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width:768px) {
+  .AddsonLinkCard{
+    /* border: 3px solid; */
+    padding: 0.1 0.2rem;
+  }
+  .AddsonLinkCardDetails{
+    width: 80%;
+    margin: 0 1rem;
+  }
+  .AddsonLinkCardDetails h2{
+    font-size: 1.4rem;
+  }
+  .AddsonLinkCardDetails p{
+    font-size: 1.1rem;
+  }
+  .Duration{
+    font-size: 1.1rem;
+  }
+}

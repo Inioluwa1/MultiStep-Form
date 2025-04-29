@@ -1,15 +1,37 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import AddsonLinks from "./AddonsLink"
 import AddsonLinkCard from './AddsonLinkCard'
 import { useNavigate } from 'react-router-dom'
 import './AddonsPage.css'
 
-export default function AddonsPage({Timeperiod}) {
+export default function AddonsPage({isMonth}) {
+  
+  const [Addon, setAddon] = useState(
+    AddsonLinks.map(addon => (
+      {...addon, 
+        selected: addon.id === 1 || addon.id === 2} // Default selected add-ons
+      )) 
+    )
+
+  // useEffect(() => {
+  //   const savedaddons = JSON.parse(localStorage.getItem('Addons'))
+  // }, [])
+
+  const toggleAddon = (id) => {
+    setAddon(prev => prev.map(addon => 
+      addon.id === id? {...addon, selected: !addon.selected} : addon
+    ))
+  }
+
   const navigate = useNavigate()
 
   const movetosummary = () => {
-    navigate("/summary")
+    const selectedAddons = Addon.filter(addon => addon.selected)
+    // localStorage.setItem('Addons', JSON.stringify(selectedAddons))
+
+    navigate("/summary", {state: {selectedAddons}})
   }
+
   const gobacktoAddon = () => {
     navigate("/plan-selection")
   }
@@ -19,12 +41,12 @@ export default function AddonsPage({Timeperiod}) {
       <h1 className="AddsonPageTitle"> Pick add-ons </h1>
       <p className='AddsonPageDeatils'> Add-ons help enhance your gaming experience </p>
       <div>
-        {AddsonLinks.map((addon, index) => (
+        {Addon.map((addon, index) => (
           <AddsonLinkCard
           key={index}
-          service={addon.service}
-          details={addon.details}
-          price={Timeperiod? addon.price: addon.price2} />
+          addon={addon}
+          toggleAddon = {toggleAddon}
+          isMonth={isMonth} />
         ))}
       </div>
 

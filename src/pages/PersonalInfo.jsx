@@ -14,7 +14,7 @@ export default function PersonalInfo({ name, setName, email, setEmail, phone, se
     // Validate the form fields
     if (name === '') {
       setNameError(true)
-    } else {
+    } else { 
       setNameError(false)
     }
     if (email === '') {

@@ -5,20 +5,24 @@ import PlanLinks from "./PlanLinks.jsx"
 import PlanLinksCard from "./PlanLinksCard.jsx"
 import './PlanSelection.css'
 
-export default function PlanSelection({selected, setSelected, Timeperiod, setTimeperiod}) {
+export default function PlanSelection({selectedName, setSelectedName, setSelectedPrice, isMonth, setisMonth}) {
   const navigate = useNavigate();
 
   const changeTimePeriod = () => {
-    setTimeperiod(!Timeperiod)
+    setisMonth(!isMonth)
+    setSelectedName("")
+    setSelectedPrice("")
   }
+
   const gobacktoInfo = () => {
     navigate("/")
   }
+
   const movetoaddons = () => {
-    if (!selected){
+    if (!selectedName){
       return
     }
-    navigate("/addons")
+    navigate("/addons") 
   }
 
   return (
@@ -30,25 +34,25 @@ export default function PlanSelection({selected, setSelected, Timeperiod, setTim
         {PlanLinks.map((link, index) => (
           <PlanLinksCard
             key={index}
-            image={link.image}
-            title={link.title}
-            price={`${Timeperiod? link.price: link.price2}`}
-            free={`${Timeperiod? "" : link.free}`}
-            selected={selected}
-            setSelected={setSelected} 
-           />
+            link={link}
+            isMonth={isMonth} 
+            price = {isMonth? `${link.monthlyPrice}` : `${link.yearlyPrice}`}
+            selectedName={selectedName}
+            setSelectedName={setSelectedName}
+            setSelectedPrice={setSelectedPrice} 
+          />
         ))}
       </div>
 
       <div className='Period'>
         <div className="Time">
-          <p className={`Month ${Timeperiod? "" : "choosen"}`}> Monthly </p>
+          <p className={`Month ${isMonth? "" : "choosen"}`}> Monthly </p>
             <div onClick={changeTimePeriod} className='Toggle'>
-              {Timeperiod? 
+              {isMonth? 
               <BiSolidToggleLeft size={60} />:
               <BiSolidToggleRight size={60} />}
             </div>
-          <p className={`Year ${Timeperiod? "choosen" : ""}`}> Yearly </p>
+          <p className={`Year ${isMonth? "choosen" : ""}`}> Yearly </p>
         </div>
       </div>
       
